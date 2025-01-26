@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interior</title>
+  </head>
+  <body>
+    <!-- section 1 (header) -->
+    <header>
+      <nav class="navbar">
+        <img class="logo" src="./assets/logo.png" alt="logo" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          class="bi bi-cart3"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+          />
+        </svg>
+        <menu id="menu" class="menu">
+          <div id="menuHeader" class="menu-header">
+            <svg
+              onclick="toggle()"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+              />
+            </svg>
+          </div>
+          <div class="menu-item">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </menu>
+        <div id="navbarLeftIcon" class="left-icon">
+          <div class="icon-container">
+            <div id="imIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-person-exclamation"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
+                />
+                <path
+                  d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1.5a.5.5 0 0 0 1 0V11a.5.5 0 0 0-.5-.5m0 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-heart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                fill="currentColor"
+                class="bi bi-cart3 --rcart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                />
+              </svg>
+            </div>
+          </div>
+          <svg
+            onclick="toggle()"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </div>
+      </nav>
+      <div class="hero" style="background-image: url(./assets/hero.jpg)">
+        <div>
+          <p>New Arrival</p>
+          <h1 class="hero-text">Discover Our New Collection</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis.
+          </p>
+          <button class="primary-btn buy-btn">BUY Now</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- section 2  (catagory)-->
+    <section>
+      <h1>Browse The Range</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div>
+        <div>
+          <img src="./assets/range/range (1).jpg" alt="" />
+          <h1>Dining</h1>
+        </div>
+        <div>
+          <img src="./assets/range/range (2).jpg" alt="" />
+          <h1>Living</h1>
+        </div>
+        <div>
+          <img src="./assets/range/range (3).jpg" alt="" />
+          <h1>Bedroom</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 3 (products)-->
+    <section>
+      <h1>Our Products</h1>
+      <div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (1).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (2).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (3).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (4).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (5).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (6).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (7).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <div>
+            <img src="./assets/products/product (8).jpg" alt="" />
+            <div>-30%</div>
+          </div>
+          <div>
+            <h1>Syltherine</h1>
+            <p>Stylish cafe chair</p>
+            <div>
+              <p>Rp 2.500.000</p>
+              <p>Rp 3.500.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button>Show More</button>
+      </div>
+    </section>
+
+    <!-- section 4 (slider)-->
+    <section>
+      <div>
+        <h1>50+ Beautiful rooms inspiration</h1>
+        <p>
+          Our designer already made a lot of beautiful prototipe of rooms that
+          inspire you
+        </p>
+        <button>Explore More</button>
+      </div>
+      <div>
+        <!-- card -->
+        <div>
+          <img src="./assets/slider/slider (1).jpg" alt="slider-image" />
+          <div>
+            <div>
+              <p>01-Bed Room</p>
+              <h1>Inner Peace</h1>
+            </div>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <img src="./assets/slider/slider (2).jpg" alt="slider-image" />
+          <div>
+            <div>
+              <p>01-Bed Room</p>
+              <h1>Inner Peace</h1>
+            </div>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- card -->
+        <div>
+          <img src="./assets/slider/slider (3).jpg" alt="slider-image" />
+          <div>
+            <div>
+              <p>01-Bed Room</p>
+              <h1>Inner Peace</h1>
+            </div>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 5 (gallery)-->
+    <section>
+      <p>Share your setup with</p>
+      <h1>#FuniroFurniture</h1>
+      <div>
+        <img src="./assets/gallery/gallery (1).jpg" alt="" />
+        <img src="./assets/gallery/gallery (2).jpg" alt="" />
+        <img src="./assets/gallery/gallery (3).jpg" alt="" />
+        <img src="./assets/gallery/gallery (4).jpg" alt="" />
+        <img src="./assets/gallery/gallery (5).jpg" alt="" />
+        <img src="./assets/gallery/gallery (6).jpg" alt="" />
+        <img src="./assets/gallery/gallery (7).jpg" alt="" />
+        <img src="./assets/gallery/gallery (8).jpg" alt="" />
+        <img src="./assets/gallery/gallery (9).jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- section 6 (footer) -->
+    <footer>
+      <div>
+        <div>
+          <img src="./assets/logo.png" alt="" />
+          <address>
+            400 University Drive Suite 200 Coral Gables, FL 33134 USA
+          </address>
+        </div>
+        <div>
+          <h1>Links</h1>
+          <div>
+            <a href="">Home</a>
+            <a href="">Shop</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h1>Help</h1>
+          <div>
+            <a href="">Privacy Policies</a>
+            <a href="">Returns</a>
+            <a href="">Privacy Policies</a>
+          </div>
+        </div>
+        <div>
+          <h1>Newsletter</h1>
+          <div>
+            <input type="email" placeholder="Enter Your Email Address" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>2023 furino. All rights reverved</p>
+      </div>
+    </footer>
+    <script src="javaScript.js"></script>
+  </body>
+</html>
