@@ -119,9 +119,9 @@
   }
 
   header .hero {
-    height: 700px;
+    height: 604px;
+    max-height: 604px;
   }
-
   .card .buy-btn {
     padding: 25px 72px;
     margin-top: 36px;
@@ -218,7 +218,4 @@
   .products .card .discount {
     padding: 0 8px;
   }
-}
-/* 2xl	96rem (1536px)	 */
-@media (width >= 96rem) {
 }

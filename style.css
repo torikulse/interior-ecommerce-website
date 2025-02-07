@@ -6,15 +6,32 @@
   font-family: "Poppins", serif;
   box-sizing: border-box;
 }
+
 :root {
-  --primary-color: #b88e2f;
-  --gary-1-color: #333333;
-  --gray-2-color: #3a3a3a;
-  --gray-3-color: #898989;
-  --light-bg: #f4f5f7;
-  --primary-bg: #fcf8f3;
-  --primary-sub-text: #616161;
-  --gray-4-color: #9f9f9f;
+  --color-primary-50: oklch(0.95 0.01 79.78);
+  --color-primary-100: oklch(0.91 0.02 78.21);
+  --color-primary-200: oklch(0.87 0.04 78.65);
+  --color-primary-300: oklch(0.83 0.05 77.98);
+  --color-primary-400: oklch(0.77 0.07 82.12);
+  --color-primary-500: oklch(0.72 0.1 85.1);
+  --color-primary-600: oklch(0.67 0.12 83.83);
+  --color-primary-700: oklch(0.61 0.11 83.42);
+  --color-primary-800: oklch(0.56 0.1 83.81);
+  --color-primary-900: oklch(0.47 0.08 84.01);
+  --color-primary-950: oklch(0.38 0.06 85.88);
+
+  /* stone  */
+  --color-stone-50: oklch(0.985 0.001 106.423);
+  --color-stone-100: oklch(0.97 0.001 106.424);
+  --color-stone-200: oklch(0.923 0.003 48.717);
+  --color-stone-300: oklch(0.869 0.005 56.366);
+  --color-stone-400: oklch(0.709 0.01 56.259);
+  --color-stone-500: oklch(0.553 0.013 58.071);
+  --color-stone-600: oklch(0.444 0.011 73.639);
+  --color-stone-700: oklch(0.374 0.01 67.558);
+  --color-stone-800: oklch(0.268 0.007 34.298);
+  --color-stone-900: oklch(0.216 0.006 56.043);
+  --color-stone-950: oklch(0.147 0.004 49.25);
 }
 
 /* common style  */
@@ -23,11 +40,41 @@ footer {
   padding: 28px 16px;
 }
 
+/* button style  */
 .primary-btn {
-  background-color: var(--primary-color);
+  background-color: var(--color-primary-600);
   color: white;
   border: none;
+  transition: all 300ms;
+}
+.primary-btn:hover {
+  background-color: var(--color-primary-700);
   cursor: pointer;
+}
+
+.primary-btn:active {
+  transform: scale(1.01);
+}
+
+.btn-secondary {
+  padding: 8px 16px;
+  font-weight: 500;
+  border: var(--primary-600) 2px solid;
+  background-color: transparent;
+  color: var(--primary-600);
+  transition: all 300ms;
+}
+.btn-secondary:hover {
+  background-color: var(--color-primary-50);
+  color: #96711b;
+}
+
+.btn-secondary:active {
+  transform: scale(1.01);
+}
+
+.title-1 {
+  color: var(--color-stone-900);
 }
 /* common style end */
 
@@ -105,7 +152,7 @@ header .hero {
 .hero .card {
   max-width: 440px;
   max-height: 440px;
-  background-color: #fff3e3;
+  background-color: var(--color-primary-50);
   padding: 40px 30px;
   border-radius: 10px;
 }
@@ -114,18 +161,18 @@ header .hero {
   font-size: 32px;
   line-height: 42px;
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--color-primary-600);
 }
 .hero .card .subtitle {
   font-size: 14px;
   font-weight: 500;
-  color: var(--gary-1-color);
+  color: var(--color-stone-700);
   margin-bottom: 4px;
 }
 .hero .card .text {
   font-size: 14px;
   font-weight: 400;
-  color: var(--gary-1-color);
+  color: var(--color-stone-700);
   margin-top: 8px;
 }
 
@@ -137,12 +184,12 @@ header .hero {
 }
 
 .browse-category .heading {
-  color: var(--gary-1-color);
+  color: var(--color-primary-950);
   text-align: center;
   margin-bottom: 10px;
 }
 .browse-category .subtitle {
-  color: var(--gary-1-color);
+  color: var(--color-stone-700);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -153,6 +200,7 @@ header .hero {
 }
 .browse-category .card {
   text-align: center;
+  width: 100%;
 }
 .browse-category .card img {
   width: 100%;
@@ -162,6 +210,7 @@ header .hero {
 .products .heading {
   text-align: center;
   margin-bottom: 20px;
+  color: var(--color-primary-950);
 }
 .products .cards {
   display: grid;
@@ -172,6 +221,10 @@ header .hero {
 .products .card {
   border-radius: 6px;
   overflow: hidden;
+  position: relative;
+}
+.products .card:hover {
+  cursor: pointer;
 }
 .products .card img {
   width: 100%;
@@ -204,39 +257,77 @@ header .hero {
   justify-content: space-between;
 }
 .products .card .title {
-  color: var(--gray-2-color);
+  color: var(--color-stone-700);
 }
 .products .card .des {
   font-weight: 400;
-  color: var(--gray-3-color);
+  color: var(--color-stone-700);
 }
 
 .products .current-price {
   font-size: 16px;
-  font-weight: 500;
-  color: var(--gray-2-color);
+  font-weight: 600;
+  color: var(--color-stone-800);
 }
 
 .products .card .prev-price {
   font-size: 14px;
   text-decoration: line-through;
-  color: var(--gray-3-color);
+  color: var(--color-stone-400);
 }
 
 .products .des-body {
   background-color: var(--light-bg);
   padding: 12px;
 }
+
+.products .overlay {
+  position: absolute;
+  bottom: -0;
+  opacity: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.72);
+  width: 100%;
+  height: 100%;
+  transition: all;
+  transition-duration: 150ms;
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+.products .overlay .btn {
+  border: none;
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 12px 52px;
+  align-self: center;
+  border: 2px solid transparent;
+}
+.products .overlay .btn:hover {
+  border: 2px solid var(--primary-color);
+}
+.products .overlay .icon-group {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.icon-group span {
+  font-size: 14px;
+}
+.overlay .icon-group > div:hover {
+  font-weight: bold;
+}
+.products .card:hover .overlay {
+  opacity: 1;
+}
 .show-more-btn-container {
   text-align: center;
   padding: 20px 0;
-}
-.show-more-btn-container button {
-  padding: 8px 16px;
-  font-weight: 500;
-  border: var(--primary-color) 2px solid;
-  background-color: transparent;
-  color: var(--primary-color);
 }
 
 .slider-container {
@@ -255,7 +346,7 @@ header .hero {
 }
 .slider-container .heading {
   margin-bottom: 4px;
-  color: var(--gray-2-color);
+  color: var(--color-stone-500);
 }
 .slider-container .des {
   font-weight: 500;
